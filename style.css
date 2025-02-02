@@ -9,15 +9,11 @@
 body {
     font-family: "Montserrat";
     color: #1A1919;
-    width:100%;
+    width: 100%;
 }
 
 .hidden {
     display: none !important;
-}
-
-.show {
-    display: block !important;
 }
 
 .logo {
@@ -25,7 +21,7 @@ body {
     width: 120px;
 }
 
-.welcome-page{
+.welcome-page {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -41,6 +37,7 @@ body {
 
 h1 {
     font-size: 30px;
+    text-align: center;
 }
 
 .p {
@@ -50,7 +47,7 @@ h1 {
 
 .pri-btn {
     align-self: center;
-    padding: 12px; 
+    padding: 12px;
     border: none;
     width: 200px;
     font: 14px;
@@ -81,9 +78,9 @@ h1 {
 }
 
 .timer-cntn {
-   display: flex; 
-   flex-direction: column;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timer {
@@ -102,8 +99,9 @@ h1 {
     height: 4px;
     width: 100%;
     border-radius: 2px;
-    background-color: #AAA5A5;
+    background-color: #d9d9d9;
 }
+
 .line2 {
     height: 4px;
     width: 0px;
@@ -112,7 +110,7 @@ h1 {
     background-color: #3A0CA3;
 }
 
-.complete-page{
+.complete-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,7 +137,7 @@ h1 {
     gap: 54px;
 }
 
-.question > div {
+.question>div {
     flex: 1.5;
     font-size: 16px;
     line-height: 24px;
@@ -167,18 +165,17 @@ label {
 
 .correct-answer {
     border: 2px solid #3A0CA3;
-    color: #3A0CA3; 
-    /* background-color: #F9F9F9; */
+    color: #3A0CA3;
 }
 
 .next-btn {
     align-self: flex-end;
-    padding: 12px; 
+    padding: 12px;
     border: none;
     width: 200px;
     font: 14px;
     border-radius: 8px;
-    color: #3A0CA3; 
+    color: #3A0CA3;
     border: 1px solid #3A0CA3;
     margin-top: 20px;
     cursor: pointer;
@@ -195,5 +192,31 @@ label {
     border: none;
 }
 
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .question-page {
+        width: 90%;
+    }
+
+    .question {
+        flex-direction: column;
+    }
+
+    .welcome-page {
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .next-btn {
+        width: 100%;
+    }
+
+    .complete-page {
+        width: 90%;
+    }
 
 
+}
