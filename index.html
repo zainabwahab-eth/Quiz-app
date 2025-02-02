@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Project</title>
+</head>
+<body>
+    <section class="logo">
+        <img class="logo" src="images/zainab.svg" alt="Zainab-Logo">
+    </section>
+
+    <main>
+        <section class="welcome-page">
+            <h1>Welcome to Quiz</h1>
+            <p class="p">Welcome to your Quiz Assessment  test . Before you begin, please take a moment to read the following instructions to ensure you have a smooth and enjoyable experience.</p>
+            <ul class="p">
+                <li>You will have a total of 20 minutes to complete the quiz.</li>
+                <li>Each question is worth 1 point, unless otherwise specified.</li>
+                <li>Try to complete the quiz in one sitting. Avoid refreshing or closing the page, as this may result in losing your progress.</li>
+            </ul>
+            <p class="p">When you're ready, click the Start Quiz button below. Best of luck!</p>
+            <button class="start-btn pri-btn">Start Quiz</button>
+        </section>
+
+        <section class="complete-page hidden">
+            <img src="images/done.svg" alt="completed" class="done-img hidden" />
+
+            <img src="images/times-up.svg" alt="time-up" class="time-up-img hidden" />
+
+            <h1 class="finish-label"></h1>
+            <p class="p">Your Score: <span class="result"></span></p>
+            <button class="playagain-btn pri-btn">Play again</button>
+        </section>
+
+        <section class="question-page hidden">
+            <div class="timer-cntn">
+                <p>Time Remaining</p>
+                <div class="timer">
+                    <img src="images/timelapse.svg" alt="timelapse-icon"/>
+                    <p class="time"></p>
+                </div>
+            </div>
+            <div class="counter-cntn">
+                <p>Question <span class="question-count"></span> of 50</p>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+            <div class="question">
+                <div>
+                    <p class="question-p">What does HTML, one of the foundational technologies of the web, stand fo?</p>
+                </div>
+                <form>
+                    <legend>Pick one Option</legend>
+
+                    <label for="option-1"  class="option-label"><input id="option-1" type="radio" name="answer" class="option"/>HTTP</label>
+
+                    <label for="option-2" class="option-label"><input id="option-2" type="radio" name="answer" class="option"/>HTTP</label>
+
+                    <label for="option-3" class="option-label"><input id="option-3" type="radio" name="answer" class="option"/>HTTP</label>
+
+                    <label for="option-4" class="option-label"><input id="option-4" type="radio" name="answer" class="option"/>HTTP</label>
+                </form> 
+            </div>
+            <button class="next-btn">Next</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
