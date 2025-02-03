@@ -1,5 +1,5 @@
 //import questions from questions.js
-import { questions } from "./questions.js";
+import { questions } from "./questions.js"
 
 //get html elements
 const startBtn = document.querySelector(".start-btn");
@@ -62,9 +62,7 @@ const displayQuestion = function () {
         .join("")}
     </form>
   `;
-  questionCountCntn.textContent = `Question ${questionCount + 1} of ${
-    questions.length
-  }`;
+  questionCountCntn.textContent = `Question ${questionCount + 1} of ${questions.length}`;
   lineCounter.style.width = `${counterLength}%`;
 };
 
@@ -84,7 +82,7 @@ const displayFinishScore = function (timeup = false) {
     finishLabel.textContent = "Congratulations! You completed your quiz";
   }
 
-  const scorePercent = (score * 100) / questions.length;
+  const scorePercent = score * 100 / questions.length;
   result.textContent = `${scorePercent}%`;
 };
 
@@ -120,7 +118,7 @@ const checkAnswer = function () {
 
   const correctAnswer = currentQuestion?.correctAnswer;
 
-  if (userAnswer === correctAnswer) score++;
+  if (userAnswer === correctAnswer) score++
 };
 
 // Event Listeners
@@ -144,7 +142,7 @@ nextBtn.addEventListener("click", function () {
 
   if (questionCount < questions.length - 1) {
     questionCount++;
-    counterLength = ((questionCount + 1) * 100) / questions.length;
+    counterLength = (questionCount + 1) * 100 / questions.length;
     setTimeout(displayQuestion, 500);
   } else {
     clearInterval(timer);
